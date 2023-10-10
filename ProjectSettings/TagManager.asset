@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Fruits
+  - name: Juicer
     uniqueID: 3558173209
+    locked: 0
+  - name: Fruit
+    uniqueID: 2989447879
     locked: 0
