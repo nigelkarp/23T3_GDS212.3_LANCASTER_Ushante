@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -10,7 +11,7 @@ public class IngredientManager : MonoBehaviour
     private Vector3 _worldPosition;
     private Draggable _lastDragged;
 
-    [SerializeField] GameObject _blender; //blender gameobject
+    [SerializeField] GameObject _blender;
 
     // Update is called once per frame
     void Update()
@@ -44,7 +45,7 @@ public class IngredientManager : MonoBehaviour
 
         if (_isDragActive )
         {
-            Drag();
+            Drag(); 
         }
         else
         {
@@ -76,4 +77,21 @@ public class IngredientManager : MonoBehaviour
     {
         _isDragActive = false;
     }
+
+    //when this object enters with the blender game object's trigger collider, console log enter
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        //checks if the item has been dropped in the blender
+        if (other.CompareTag("Blender"))
+        {
+            this.gameObject.SetActive(false);
+            //check that its the right fruit
+
+        }
+        else
+        {
+            return;
+        }
+    }
+
 }

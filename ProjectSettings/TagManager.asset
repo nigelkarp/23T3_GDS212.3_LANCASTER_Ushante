@@ -5,6 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ingredient
+  - Blender
+  - Orange
+  - Mango
+  - Blueberry
+  - Raspberry
+  - Lemon
+  - Pineapple
+  - Strawberry
+  - Watermelon
   layers:
   - Default
   - TransparentFX
