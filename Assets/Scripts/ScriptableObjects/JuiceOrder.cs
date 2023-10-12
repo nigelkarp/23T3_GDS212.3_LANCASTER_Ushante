@@ -10,6 +10,8 @@ public class JuiceOrder : ScriptableObject
     public float orderTime;
     public IngredientQuantity[] requiredIngredients;
 
+    public Ingredient pineapple;
+
     [System.Serializable]
     public class IngredientQuantity
     {
@@ -29,7 +31,7 @@ public class JuiceOrder : ScriptableObject
             {
                 //add in ingredients here after making sxriptable and how much are needed. For now just do one.
                 //directly references the Pineapple scriptable object
-                new IngredientQuantity { ingredient = Ingredient.Pineapple, quantity = 2},
+                new IngredientQuantity { ingredient = pineapple, quantity = 2},
             };
         }
     }
