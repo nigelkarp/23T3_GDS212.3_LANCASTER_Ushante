@@ -1,19 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using static JuiceOrder;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private TextMeshProUGUI juiceNameText; // Reference to the TMP object for displaying the current order
+
+    private JuiceOrder _currentRecipe; // Reference to the current recipe
+
+    private void Start()
     {
-       //set initial recipe
-       //current game progression?? e.g. Juice order. recipe 1 for game progress. level 1?
+        // Set initial recipe
+
+        // Update the UI to display the current order's name
+        UpdateUI();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void UpdateUI()
     {
-        
+        // Update the TMP text to display the current order's name.
+        juiceNameText.text = _currentRecipe.recipeName;
     }
 }
+
