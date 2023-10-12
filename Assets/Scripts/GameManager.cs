@@ -18,6 +18,18 @@ public class GameManager : MonoBehaviour
         UpdateUI();
     }
 
+    public void StartRecipe(JuiceOrder newRecipe)
+    {
+        _currentRecipe = newRecipe;
+        //set time limit, update UI
+    }
+
+    public void GiveNextRecipe()
+    {
+        //determine which recipe class to instantiate
+        //instantiate the chosen recipe class, and call start recipe to begin
+    }
+
     private void UpdateUI()
     {
         // Update the TMP text to display the current order's name.
