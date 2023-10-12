@@ -7,30 +7,30 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Game Progress", menuName = "Game/Game Progress")]
 public class GameProgress : ScriptableObject
 {
-    [SerializeField] private int completedRecipes = 0;
-    [SerializeField] private int unlockedLevels = 1; // Assume that the first level is unlocked by default.
+    [SerializeField] private int _completedRecipes = 0;
+    [SerializeField] private int _unlockedLevels = 1; // Assume that the first level is unlocked by default.
 
     public int CompletedRecipes
     {
-        get { return completedRecipes; }
-        set { completedRecipes = value; }
+        get { return _completedRecipes; }
+        set { _completedRecipes = value; }
     }
 
     public int UnlockedLevels
     {
-        get { return unlockedLevels; }
-        set { unlockedLevels = value; }
+        get { return _unlockedLevels; }
+        set { _unlockedLevels = value; }
     }
 
     public void ResetProgress()
     {
-        completedRecipes = 0;
-        unlockedLevels = 1;
+        _completedRecipes = 0;
+        _unlockedLevels = 1;
     }
 
     public void CompleteRecipe()
     {
-        completedRecipes++;
+        _completedRecipes++;
         // implement additional logic here, such as unlocking new levels.
     }
 }

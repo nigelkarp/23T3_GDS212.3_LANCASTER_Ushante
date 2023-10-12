@@ -6,7 +6,7 @@ using static JuiceOrder;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI juiceNameText; // Reference to the TMP object for displaying the current order
+    [SerializeField] private TextMeshProUGUI _juiceNameText; // Reference to the TMP object for displaying the current order
 
     private JuiceOrder _currentRecipe; // Reference to the current recipe
 
@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     private void UpdateUI()
     {
         // Update the TMP text to display the current order's name.
-        juiceNameText.text = _currentRecipe.recipeName;
+        _juiceNameText.text = _currentRecipe.recipeName;
     }
 }
 
