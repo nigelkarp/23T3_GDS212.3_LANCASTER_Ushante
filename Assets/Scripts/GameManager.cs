@@ -21,7 +21,11 @@ public class GameManager : MonoBehaviour
     private void UpdateUI()
     {
         // Update the TMP text to display the current order's name.
-        _juiceNameText.text = _currentRecipe.recipeName;
+        if (_currentRecipe != null)
+        {
+            _juiceNameText.text = _currentRecipe.recipeName;
+        }
+
     }
 }
 
