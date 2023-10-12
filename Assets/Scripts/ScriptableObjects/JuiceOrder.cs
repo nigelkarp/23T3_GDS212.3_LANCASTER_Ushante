@@ -20,14 +20,17 @@ public class JuiceOrder : ScriptableObject
     [CreateAssetMenu(fileName = "Recipe 1", menuName = "Juice Game/Recipe 1")]
     public class Recipe1 : JuiceOrder
     {
+        //recipes
         public Recipe1()
         {
             recipeName = "Tropicana";
             orderTime = 10f;
             requiredIngredients = new IngredientQuantity[]
             {
-                new IngredientQuantity { ingredient = Ingredient.Apple}
-            }
+                //add in ingredients here after making sxriptable and how much are needed. For now just do one.
+                //directly references the Pineapple scriptable object
+                new IngredientQuantity { ingredient = Ingredient.Pineapple, quantity = 2},
+            };
         }
     }
 }
