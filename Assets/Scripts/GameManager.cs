@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         // Set initial recipe as Recipe 1
-        StartRecipe(new JuiceOrder.Recipe1());
+        JuiceOrder.Recipe1 initialRecipe = ScriptableObject.CreateInstance<JuiceOrder.Recipe1>();
+        StartRecipe(initialRecipe);
     }
 
     public void StartRecipe(JuiceOrder newRecipe)
