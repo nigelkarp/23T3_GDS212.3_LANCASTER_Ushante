@@ -55,8 +55,8 @@ public class IngredientManager : MonoBehaviour
             {
                 Debug.Log("Ingredient Clicked");
                 // Add logic to check what item is checked (scriptable stuff)
-                UpdateColor();
                 ToggleSelection();
+                UpdateColor();
             }
         }
     }
@@ -68,7 +68,7 @@ public class IngredientManager : MonoBehaviour
 
     void UpdateColor()
     {
-        Color color = isSelected ? selectedColor : selectedColor;
+        Color color = isSelected ? selectedColor : Color.white;
         _ingredientImageSprite.color = color;
     }
 }
