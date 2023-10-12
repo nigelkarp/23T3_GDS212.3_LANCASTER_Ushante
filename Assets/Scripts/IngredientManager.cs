@@ -6,11 +6,6 @@ using UnityEngine;
 
 public class IngredientManager : MonoBehaviour
 {
-    //private bool _isDragActive = false; //Is player dragging
-    //private Vector2 _screenPosition; //Object position on screen
-    //private Vector3 _worldPosition;
-    //private Draggable _lastDragged;
-
     private bool _isClicked = false; //Is the object clicked
 
     [SerializeField] GameObject _blender;
@@ -18,8 +13,6 @@ public class IngredientManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if is clicked is true (logic happens)
-        //link scriptable stuff here
 
         //This cheks for mouse click and touch input
         if (Input.GetMouseButtonDown(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began))
@@ -51,8 +44,9 @@ public class IngredientManager : MonoBehaviour
             if (_isClicked)
             {
                 Debug.Log("Ingredient Clicked");
-                return;
+                //add logic to check what item checked blah blah (scriptable stuff)
             }
+            return;
         }
     }
 
