@@ -46,6 +46,7 @@ public class IngredientManager : MonoBehaviour
                 Debug.Log("Ingredient Clicked");
                 //add logic to check what item checked blah blah (scriptable stuff)
             }
+
             return;
         }
     }
