@@ -7,5 +7,4 @@ using UnityEngine;
 public class Ingredient : ScriptableObject
 {
     public string ingredientName;
-    public Sprite ingredientIcon; //Icon displayed for ingredients
 }
