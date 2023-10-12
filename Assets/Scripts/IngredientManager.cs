@@ -10,6 +10,18 @@ public class IngredientManager : MonoBehaviour
 
     [SerializeField] GameObject _blender;
 
+    public Color selectedColor; // Color the Ingredient will change to when selected
+    [SerializeField] private GameObject _ingredientImage;
+    private SpriteRenderer _ingredientImageSprite;
+
+    private bool isSelected;
+
+    private void Start()
+    {
+        _ingredientImageSprite = _ingredientImage.GetComponent<SpriteRenderer>(); // gets the sprite off of the ingredients image
+        isSelected = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -45,10 +57,16 @@ public class IngredientManager : MonoBehaviour
             {
                 Debug.Log("Ingredient Clicked");
                 //add logic to check what item checked blah blah (scriptable stuff)
+                isSelected = !isSelected;
+                UpdateColor();
             }
 
             return;
         }
     }
 
+    void UpdateColor()
+    {
+        _ingredientImageSprite.color = isSelected ? selectedColor : Color.black;
+    }
 }
