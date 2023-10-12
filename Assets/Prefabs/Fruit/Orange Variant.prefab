@@ -65,8 +65,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1474620245, guid: fbcfc2fe3b062be45bab9eaffb6912a7, type: 3}
     - target: {fileID: 3849408369420287754, guid: 19543540c74cf784fb60e31dedc298e0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3849408369420287754, guid: 19543540c74cf784fb60e31dedc298e0, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556013371603289402, guid: 19543540c74cf784fb60e31dedc298e0, type: 3}
+      propertyPath: _ingredientImage
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

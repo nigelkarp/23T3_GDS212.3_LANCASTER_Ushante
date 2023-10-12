@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class IngredientManager : MonoBehaviour
 {
-    private bool _isClicked = false; //Is the object clicked
+    private bool _isClicked = false; // Is the object clicked
 
     [SerializeField] GameObject _blender;
 
@@ -18,15 +18,14 @@ public class IngredientManager : MonoBehaviour
 
     private void Start()
     {
-        _ingredientImageSprite = _ingredientImage.GetComponent<SpriteRenderer>(); // gets the sprite off of the ingredients image
+        _ingredientImageSprite = _ingredientImage.GetComponent<SpriteRenderer>(); // Gets the sprite off of the ingredient's image
         isSelected = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        //This cheks for mouse click and touch input
+        // This checks for mouse click and touch input
         if (Input.GetMouseButtonDown(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began))
         {
             Vector3 inputPosition;
@@ -56,17 +55,21 @@ public class IngredientManager : MonoBehaviour
             if (_isClicked)
             {
                 Debug.Log("Ingredient Clicked");
-                //add logic to check what item checked blah blah (scriptable stuff)
-                isSelected = !isSelected;
+                // Add logic to check what item is checked (scriptable stuff)
+                ToggleSelection();
                 UpdateColor();
             }
-
-            return;
         }
+    }
+
+    void ToggleSelection()
+    {
+        isSelected = !isSelected;
     }
 
     void UpdateColor()
     {
-        _ingredientImageSprite.color = isSelected ? selectedColor : Color.black;
+        Color color = isSelected ? selectedColor : Color.black;
+        _ingredientImageSprite.color = color;
     }
 }
